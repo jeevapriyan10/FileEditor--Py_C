@@ -164,7 +164,15 @@ int quit()
 
 //Main Function
 int main(){
-    command();
-    action();
+    char repeat;
+    do
+    {
+        command();
+        action();
+        printf("\nWant to Do Again ? (Y/N) : ");
+        scanf("%s",&repeat);
+
+    } while (repeat == 'Y' || repeat == 'y');
+    
     return 0;
 }
